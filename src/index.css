@@ -21,7 +21,6 @@
   --cursor-position: 50%;
   --hover-animated-gradient: linear-gradient( 
     90deg,
-    
     transparent calc(var(--cursor-position) - 25%), 
     #e2e8f073 calc(var(--cursor-position) - .5%), 
     #e2e8f0b5 var(--cursor-position), 
@@ -53,6 +52,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  width: 100%;
   min-width: 320px;
   min-height: 100vh;
 }

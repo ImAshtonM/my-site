@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Projects from "./Projects"
 import ProjectCard from './ProjectCard'
 import Header from './Header'
 
@@ -11,13 +12,19 @@ function App() {
   return (
     <>
       <Header />
-      <ProjectCard 
-      projectName="Small 3D House"
-      description="UI/UX experiment to test my abilities at creating 3D scenes in CSS"
-      overviewLink= ""
-      projectLink= ""
-      githubLink=""
-     />
+      <main className="mx-auto max-w-7xl px-4 flex flex-wrap justify-center items-start gap-4">
+        {Projects.map((project) => {
+          return (
+            <ProjectCard
+            projectName= {project.name}
+            description= {project.description}
+            projectLink= {project.projectLink}
+            githubLink= {project.githubLink}
+            />
+          )
+        })}
+      </main>
+
     </>
   )
 }
