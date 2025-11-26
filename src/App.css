@@ -66,12 +66,12 @@ Focus ring: blue-400 (#60a5fa)
   color: #888;
 }
 
-/* .glassCard {
+.glassCard {
   --border-width: 1px;
   border-radius: 1rem;
   position: relative;
   padding: 15px;
-  background: hsl(from var(--surface-3) h s l / 0.25);
+  background: hsl(from var(--surface-color) h s l / 0.25);
   backdrop-filter: blur(12px);
 }
 
@@ -86,4 +86,4 @@ Focus ring: blue-400 (#60a5fa)
   mask: linear-gradient(black, black) border-box,
     linear-gradient(black, black) padding-box;
   mask-composite: subtract;
-} */
+}
