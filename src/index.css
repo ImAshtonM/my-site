@@ -14,6 +14,7 @@
   --surface-color: #0f172a90; /* slate-900 */
   --surface-hovered-color: #0f172ac0; /* slate-900 */
   --surface-shadow-color: #e2e8f022;
+  --surface-shadow--gradient-overlay: linear-gradient( 45deg, transparent, #ffffff49);
   --surface-shadow-hovered-color: #e2e8f055;
   --border-color: #1e293b7a; /* slate-800 */
   --brand-color: #2563eb; /* blue-600 */
