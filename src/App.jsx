@@ -14,18 +14,25 @@ function App() {
     <>
       <Header />
       <main className="mx-auto max-w-7xl px-4 flex flex-wrap justify-center items-center gap-4">
-        <Hero />
+        <Hero 
+          pageTitle = "Ashton Montgomery | Developer"
+          pageSubTitle = "Solving real world problems through software"
+          heroCTA = "I need to come up with a good CTA"
+          heroCTALink = "Link to form"
+          heroImage = ""
+          heroImageAlt = "Alternate text for the hero image"
+        />
         <div id="projects" className="flex flex-wrap items-stretch justify-center gap-4">
-        {Projects.map((project) => {
-          return (
-            <ProjectCard
-            projectName= {project.name}
-            description= {project.description}
-            projectLink= {project.projectLink}
-            githubLink= {project.githubLink}
-            />
-          )
-        })}
+          {Projects.map((project) => {
+            return (
+              <ProjectCard
+              projectName= {project.name}
+              description= {project.description}
+              projectLink= {project.projectLink}
+              githubLink= {project.githubLink}
+              />
+            )
+          })}
         </div>
       </main>
 
