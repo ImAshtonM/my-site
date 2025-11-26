@@ -11,7 +11,7 @@ function ProjectCard(props) {
     };
 
     return (
-        <div className="project group glassCard w-1/4 max-w-3xs flex flex-col items-center p-3 bg-[var(--surface-color)] rounded-lg border-[var(--border-color)] shadow-md shadow-[var(--surface-shadow-color)] hover:shadow-lg hover:shadow-[var(--surface-shadow-hovered-color)]">
+        <div className="project group glassCard w-1/4 max-w-3xs flex flex-col justify-between items-center p-3 bg-[var(--surface-color)] rounded-lg border-[var(--border-color)] shadow-md shadow-[var(--surface-shadow-color)] hover:shadow-lg hover:shadow-[var(--surface-shadow-hovered-color)]">
             <h3 className="text-lg font-bold" >{props.projectName}</h3>
             <p class="projectDescription" className="w-9/10">{props.description}</p>
             <div className="projectLinks w-fit flex flex-col justify-center items-center my-1 gap-1 mt-2">
