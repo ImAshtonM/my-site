@@ -1,19 +1,19 @@
 import React from "react"
 
-function Hero() {
+function Hero(props) {
     return (
-        <div id="hero" className="w-full">
-            <div className="container flex gap-2 justify-center items-center">
-                <div className="basis-1/2">
-                    <h1>Web Developer</h1>
-                    <h2>Solving real world problems through software</h2>
+        <div id="hero" className="w-full my-2 min-h-[25dvh] flex justify-center items-center">
+            <div className="container w-[80%] h-full flex justify-center items-center gap-2">
+                <div className="basis-1/2 justify-items-start">
+                    <h1 className="text-2xl">{props.pageTitle}</h1>
+                    <h2 className="text-xl">{props.pageSubTitle}</h2>
                     <div className="cta">
-                        <p>Come up with a good CTA</p>
-                        <button><a href="">Link to form</a></button>
+                        <p>{props.heroCTA}</p>
+                        <button><a href={props.heroCTALink}>Link to form</a></button>
                     </div>
                 </div>
                 <div className="basis-1/2">
-                    <img src="" alt="Hero Image" srcset=""  className=""/>
+                    <img src={props.heroImage} alt={props.heroImageAlt} srcset=""  className=""/>
                 </div>
             </div>
         </div>
