@@ -22,7 +22,7 @@ function ProjectCard(props) {
                     </div>
                 </>
             )} 
-            <div className="clickable absolute cursor-pointer" onClick={() => {setShowContent(!showContent); console.log("Clicked");}}></div>
+            <div className="absolute w-full h-full cursor-pointer" onClick={() => {setShowContent(!showContent); console.log("Clicked");}}></div>
         </div>
     )
 }
