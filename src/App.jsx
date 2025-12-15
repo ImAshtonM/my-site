@@ -8,7 +8,8 @@ import Header from './Header'
 import Hero from './Hero'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  
 
   return (
     <>
@@ -22,7 +23,8 @@ function App() {
           heroImage = ""
           heroImageAlt = "Alternate text for the hero image"
         />
-        <div id="projects" className="flex flex-wrap items-stretch justify-center gap-4">
+        {/* Site Directions from last site design(clickable links) or modify site based on users choice? */}
+        <div id="projects" className="flex flex-wrap items-start justify-center gap-4">
           {Projects.map((project) => {
             return (
               <ProjectCard
@@ -34,6 +36,9 @@ function App() {
             )
           })}
         </div>
+        {/* Tech Stack */}
+        {/* Services */}
+        {/* Contact Section */}
       </main>
 
     </>
