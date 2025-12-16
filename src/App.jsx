@@ -7,6 +7,8 @@ import ProjectCard from './ProjectCard'
 import Header from './Header'
 import Hero from './Hero'
 import TechStack from './TechStack'
+import Services from './Services'
+import Footer from './Footer'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,9 +27,9 @@ function App() {
           heroImageAlt = "Alternate text for the hero image"
         />
         {/* Site Directions from last site design(clickable links) or modify site based on users choice? */}
-        <div id="projects" className="flex flex-col items-start gap-4">
+        <section id="projects" className="flex flex-col items-start gap-4">
           <div id="wordPress" className="flex flex-col gap-4">
-            <h3 className="text-left text-xl font-bold ">WordPress Projects</h3>
+            <h3 className="text-left text-xl font-bold text-[var(--brand-color)] ">WordPress Projects</h3>
             <div className="flex flex-wrap items-start justify-start gap-4">
               {Projects.map((project) => {
                 if (project["tags"].includes("WordPress")) {
@@ -44,7 +46,7 @@ function App() {
             </div>
           </div>
           <div id="uiExperiments" className="flex flex-col gap-4">
-            <h3 className="text-left text-xl font-bold ">UI/UX Experiments: 3D CSS</h3>
+            <h3 className="text-left text-xl font-bold text-[var(--brand-color)] ">UI/UX Experiments: 3D CSS</h3>
             <div className="flex flex-wrap items-start justify-start gap-4">
               {Projects.map((project) => {
                 if (project["tags"].includes("3D CSS")) {
@@ -78,12 +80,14 @@ function App() {
               })}
             </div>
           </div> */}
-        </div>
+        </section>
         {/* Add an "Upcoming Projects" section to showcase progress in the workout tracker app. Can have blog like updates covering what's been done and new techniques learnt.  */}
         {/* Tech Stack */}
         <TechStack />
         {/* Services */}
+        <Services />
         {/* Contact Section */}
+        <Footer />
       </main>
 
     </>
