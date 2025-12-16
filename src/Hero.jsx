@@ -1,6 +1,4 @@
-import React from "react"
-
-function Hero(props) {
+export default function Hero(props) {
     return (
         <div id="hero" className="w-full my-2 min-h-[25dvh] flex justify-center items-center">
             <div className="container w-[80%] h-full flex justify-center items-center gap-2">
@@ -18,6 +16,4 @@ function Hero(props) {
             </div>
         </div>
     )
-}
-
-export default Hero 
+};

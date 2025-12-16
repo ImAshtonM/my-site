@@ -1,4 +1,4 @@
-function ContactForm() {
+export default function ContactForm() {
     return (
         <form id="contactForm" action="https://formspree.io/f/mayzqdjq" method="post"> 
                     
@@ -63,6 +63,4 @@ function ContactForm() {
                     <input type="submit" value="Submit!" class="contactSubmit" />
                 </form>
     )
-}
-
-export default ContactForm
+};

@@ -1,6 +1,4 @@
-import React from "react"
-
-function Header() {
+export default function Header() {
 return (
     <header className="flex w-full mb-2 min-w-full  justify-center gap-6 ">
         <img src="" alt="" className="basis-1/6 min-w-3xs" />
@@ -19,4 +17,3 @@ return (
     </header>
 )};
 
-export default Header;

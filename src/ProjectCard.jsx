@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 
-function ProjectCard(props) {
+export default function ProjectCard(props) {
     const [showContent, setShowContent] = useState(false);
     const handleMouseMove = (e) => {
         const rect = e.currentTarget.getBoundingClientRect();
@@ -25,6 +25,4 @@ function ProjectCard(props) {
             <div className="absolute w-full h-full cursor-pointer" onClick={() => {setShowContent(!showContent); console.log("Clicked");}}></div>
         </div>
     )
-}
-
-export default ProjectCard;
+};

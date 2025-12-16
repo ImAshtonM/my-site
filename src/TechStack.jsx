@@ -1,7 +1,7 @@
-function TechStack() {
+export default function TechStack() {
     return (
         <section id="techStack" className="w-full py-4 flex flex-col gap-4 justify-center items-center">
-                <h3 className="w-full text-left">Were You Asking About My Current Tech Stack?</h3>
+                <h3 className="w-full text-left text-xl text-[var(--brand-color)]">Were You Asking About My Current Tech Stack?</h3>
                 <div className="flex gap-4">
                     <div className="basis-1/2 text-nowrap">
                         <ul>
@@ -24,6 +24,4 @@ function TechStack() {
                 </div>
         </section>
     )
-}
-
-export default TechStack
+};
