@@ -1,7 +1,7 @@
 export default function Header() {
 return (
-    <header className="flex w-full mb-2 min-w-full  justify-center gap-6 ">
-        <img src="" alt="" className="basis-1/6 min-w-3xs" />
+    <header className="flex w-full mb-2 min-w-full  justify-center items-center gap-6 ">
+        <img src="src\assets\siteLogoBlue.png" alt="" className="w-[100px] logo" />
         <div className="basis-2/3">
             <p class="font-semibold leading-tight truncate">Ashton Montgomery</p>
             <p class="text-sm text-gray-500 dark:text-gray-400 truncate">Front-End Developer</p>
