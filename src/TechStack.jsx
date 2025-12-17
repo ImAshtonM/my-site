@@ -8,17 +8,19 @@ export default function TechStack() {
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>JavaScript</li>
+                            <li>React</li>
                             <li>NodeJS</li>
                             <li>Postgres SQL</li>
                         </ul>
                     </div>
                     <div className="basis-1/2">
                         <div id="techStackIcons">
-                            <img src="/IMG/teckStack/html-5.182x256.png" alt="HTML icon" />
-                            <img src="/IMG/teckStack/css-3.182x256.png" alt="CSS icon" />
-                            <img src="/IMG/teckStack/javascript.256x256.png" alt="JavaScript icon" />
-                            <img src="/IMG/teckStack/nodejs.256x157.png" alt="NodeJS icon" />
-                            <img src="/IMG/teckStack/postgresql-plain-wordmark.256x254.png" alt="PostgresSQL icon" />
+                            <img src="src\assets\techStack\html-5.182x256.png" alt="HTML icon" />
+                            <img src="src\assets\techStack\css-3.182x256.png" alt="CSS icon" />
+                            <img src="src\assets\techStack\javascript.256x256.png" alt="JavaScript icon" />
+                            <img src="" alt="React icon" />
+                            <img src="src\assets\techStack\nodejs.256x157.png" alt="NodeJS icon" />
+                            <img src="src\assets\techStack\postgresql-plain-wordmark.256x254.png" alt="PostgresSQL icon" />
                         </div>
                     </div>
                 </div>
