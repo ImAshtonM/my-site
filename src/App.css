@@ -29,42 +29,42 @@ Focus ring: blue-400 (#60a5fa)
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em var(--brand-color));
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em var(--brand-color));
 }
 
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+  #techStackIcons > img:nth-of-type(1) {
+    animation: diagonalOrbit 9.5s infinite linear;
+  }
 
+  #techStackIcons > img:nth-of-type(2) {
+      animation: diagonalOrbit2 9.75s infinite linear;
+  }
+
+  #techStackIcons > img:nth-of-type(3) {
+      animation: horizontalOrbit 10s infinite linear;
+  }
+
+  #techStackIcons > img:nth-of-type(4) {
+      animation: verticalOrbit 10.25s infinite linear;
+  }
+
+  #techStackIcons > img:nth-of-type(5) {
+      animation: diagonalOrbit 10.5s reverse infinite linear;
+  }
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
 
 .glassCard {
   --border-width: 1px;
@@ -86,4 +86,156 @@ Focus ring: blue-400 (#60a5fa)
   mask: linear-gradient(black, black) border-box,
     linear-gradient(black, black) padding-box;
   mask-composite: subtract;
+}
+
+@keyframes diagonalOrbit {
+    0% {
+        transform: translate3d(0, 0, 2em);
+    }
+    
+    12.5% {
+        transform: translate3d(2em, -2em, 1em);
+    }
+    
+    25% {
+        transform: translate3d(4em, -4em, 0em);
+    }
+    
+    37.5% {
+        transform: translate3d(2em, -2em, -1em);
+    }
+    
+    50% {
+        transform: translate3d(0, 0, -2em);
+    }
+    
+    62.5% {
+        transform: translate3d(-2em, 2em, -1em);
+    }
+    
+    75% {
+        transform: translate3d(-4em, 4em, 0em);
+    }
+    
+    87.5% {
+        transform: translate3d(-2em, 2em, 1em);
+    }
+    
+    100% {
+        transform: translate3d(0, 0, 2em);
+    }
+}
+
+@keyframes diagonalOrbit2 {
+    0% {
+        transform: translate3d(0, 0, 2em);
+    }
+    
+    12.5% {
+        transform: translate3d(-2em, -2em, 1em);
+    }
+    
+    25% {
+        transform: translate3d(-4em, -4em, 0em);
+    }
+    
+    37.5% {
+        transform: translate3d(-2em, -2em, -1em);
+    }
+    
+    50% {
+        transform: translate3d(0, 0, -2em);
+    }
+    
+    62.5% {
+        transform: translate3d(2em, 2em, -1em);
+    }
+    
+    75% {
+        transform: translate3d(4em, 4em, 0em);
+    }
+    
+    87.5% {
+        transform: translate3d(2em, 2em, 1em);
+    }
+    
+    100% {
+        transform: translate3d(0, 0, 2em);
+    }
+}
+
+@keyframes horizontalOrbit {
+    0% {
+        transform: translate3d(0, 0, 2em);
+    }
+    
+    12.5% {
+        transform: translate3d(2em, 0, 1em);
+    }
+    
+    25% {
+        transform: translate3d(4em, 0, 0em);
+    }
+    
+    37.5% {
+        transform: translate3d(2em, 0, -1em);
+    }
+    
+    50% {
+        transform: translate3d(0, 0, -2em);
+    }
+    
+    62.5% {
+        transform: translate3d(-2em, 0, -1em);
+    }
+    
+    75% {
+        transform: translate3d(-4em, 0, 0em);
+    }
+    
+    87.5% {
+        transform: translate3d(-2em, 0, 1em);
+    }
+    
+    100% {
+        transform: translate3d(0, 0, 2em);
+    }
+}
+
+@keyframes verticalOrbit {
+    0% {
+        transform: translate3d(0, 0, 2em);
+    }
+    
+    12.5% {
+        transform: translate3d(0, -2.5em, 1em);
+    }
+    
+    25% {
+        transform: translate3d(0, -5em, 0em);
+    }
+    
+    37.5% {
+        transform: translate3d(0, -2.5em, -1em);
+    }
+    
+    50% {
+        transform: translate3d(0, 0, -2em);
+    }
+    
+    62.5% {
+        transform: translate3d(0, 2.5em, -1em);
+    }
+    
+    75% {
+        transform: translate3d(0, 5em, 0em);
+    }
+    
+    87.5% {
+        transform: translate3d(0, 2.5em, 1em);
+    }
+    
+    100% {
+        transform: translate3d(0, 0, 2em);
+    }
 }
