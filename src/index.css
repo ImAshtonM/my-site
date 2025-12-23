@@ -19,6 +19,7 @@
   --border-color: #1e293b7a; /* slate-800 */
   --brand-color: #2563eb; /* blue-600 */
   --hover-color: #1d4ed8; /* blue-700 */
+  --mask-color: #020617ee;
   --cursor-position: 50%;
   --hover-animated-gradient: linear-gradient( 
     90deg,
@@ -34,6 +35,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 a {
