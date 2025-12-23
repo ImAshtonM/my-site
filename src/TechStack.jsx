@@ -14,13 +14,13 @@ export default function TechStack() {
                         </ul>
                     </div>
                     <div className="basis-1/2">
-                        <div id="techStackIcons" className="relative transform-3d lg:translate-y-[100%] lg:translate-x-[50%]">
+                        <div id="techStackIcons" className="relative transform-3d translate-y-[100%] translate-x-[50%]">
                             <img src="src\assets\techStack\html-5.182x256.png" alt="HTML icon" className="absolute w-[50px] translate-y-[75%]"/>
                             <img src="src\assets\techStack\css-3.182x256.png" alt="CSS icon" className="absolute w-[50px] translate-y-[75%]"/>
                             <img src="src\assets\techStack\javascript.256x256.png" alt="JavaScript icon" className="absolute w-[50px] translate-y-[100%]"/>
                             <img src="src\assets\techStack\nodejs.256x157.png" alt="NodeJS icon" className="absolute w-[50px] translate-y-[100%]"/>
                             <img src="src\assets\techStack\postgresql-plain-wordmark.256x254.png" alt="PostgresSQL icon" className="absolute w-[50px] translate-y-[100%]"/>
-                            <img src="" alt="React icon" /* className="absolute w-[50px]" *//>
+                            <img src="src\assets\techStack\React.png" alt="React icon" className="w-[50px]"/>
                         </div>
                     </div>
                 </div>
