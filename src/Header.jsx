@@ -1,19 +1,40 @@
-export default function Header() {
-return (
-    <header className="flex w-full mb-2 min-w-full  justify-center items-center gap-6 ">
-        <img src="src\assets\siteLogoBlue.png" alt="" className="w-[100px] logo" />
+import { useState } from "react";
+
+export default function Header({onResetSiteMode}) {
+    const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+    return (
+    <header className="w-full mb-2 min-w-full flex flex-col md:flex-row justify-center items-center gap-6 relative">
+        <img onClick={onResetSiteMode} src="src\assets\siteLogoBlue.png" alt="" className="w-[100px] logo" />
         <div className="basis-2/3">
-            <p class="font-semibold leading-tight truncate">Ashton Montgomery</p>
-            <p class="text-sm text-gray-500 dark:text-gray-400 truncate">Front-End Developer</p>
+            <p className="font-semibold leading-tight truncate">Ashton Montgomery</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 truncate">Front-End Developer</p>
         </div>
-        <nav class="basis-1/2 ml-auto" aria-label="Primary">
-        <ul class="flex justify-end items-center gap-6">
-            <li><a class="rounded-md px-3 py-1 border hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2" href="#projects">Projects</a></li>
-            <li><a class="rounded-md px-3 py-1 border hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2" href="#services">Services</a></li>
-            <li><a class="rounded-md px-3 py-1 border hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2" href="#about">About</a></li>
-            <li><a class="rounded-md px-3 py-1 border hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2" href="#contact">Contact</a></li>
-        </ul>
+        <button id="menu-btn" className="md:hidden focus:outline-none absolute top-[10%] right-[5%]" aria-label="Toggle Menu" onClick={() => setShowMobileMenu(!showMobileMenu)}>
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+        <nav className="basis-1/2 ml-auto" aria-label="Primary">
+            <ul className="flex justify-end items-center invisbile md:visible md:gap-6">
+                <li><a className="rounded-md px-3 py-1 border hover:underline hover:text-[var(--hover-color)] focus:outline-none focus:ring-2 focus:ring-offset-2" href="#projects">Projects</a></li>
+                <li><a className="rounded-md px-3 py-1 border hover:underline hover:text-[var(--hover-color)] focus:outline-none focus:ring-2 focus:ring-offset-2" href="#services">Services</a></li>
+                <li><a className="rounded-md px-3 py-1 border hover:underline hover:text-[var(--hover-color)] focus:outline-none focus:ring-2 focus:ring-offset-2" href="#about">About</a></li>
+                <li><a className="rounded-md px-3 py-1 border hover:underline hover:text-[var(--hover-color)] focus:outline-none focus:ring-2 focus:ring-offset-2" href="#contact">Contact</a></li>
+            </ul>
         </nav>
+        {showMobileMenu && (
+            <>
+                <nav id="mobile-menu" className="bg-slate-800 px-4 pb-4 space-y-2 rounded-md absolute top-[25%] right-[7.5%]">
+                    <a href="#home" className="block py-2 hover:text-[var(--hover-color)]" onClick={() => setShowMobileMenu(false)}>Home</a>
+                    <a href="#projects" className="block py-2 hover:text-[var(--hover-color)]" onClick={() => setShowMobileMenu(false)}>Projects</a>
+                    <a href="#services" className="block py-2 hover:text-[var(--hover-color)]" onClick={() => setShowMobileMenu(false)}>Services</a>
+                    <a href="#about" className="block py-2 hover:text-[var(--hover-color)]" onClick={() => setShowMobileMenu(false)}>About</a>
+                    <a href="#contact" className="block py-2 hover:text-[var(--hover-color)]" onClick={() => setShowMobileMenu(false)}>Contact</a>
+                </nav>
+            </>
+        )}
     </header>
 )};
 
