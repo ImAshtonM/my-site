@@ -1,11 +1,13 @@
 import { useState } from "react";
+import PortfolioModeNav from "./PortfolioModeNav";
+import FreelanceModeNav from "./FreelanceModeNav";
 
-export default function Header({onResetSiteMode}) {
+export default function Header({onResetSiteMode, currentSiteMode}) {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
     return (
     <header className="w-full mb-2 min-w-full flex flex-col md:flex-row justify-center items-center gap-6 relative">
-        <img onClick={onResetSiteMode} src="src\assets\siteLogoBlue.png" alt="" className="w-[100px] logo" />
+        <img onClick={onResetSiteMode} src="src\assets\siteLogoBlue.png" alt="" className="w-[100px] logo cursor-pointer" />
         <div className="basis-2/3">
             <p className="font-semibold leading-tight truncate">Ashton Montgomery</p>
             <p className="text-sm text-gray-500 dark:text-gray-400 truncate">Front-End Developer</p>
@@ -16,14 +18,8 @@ export default function Header({onResetSiteMode}) {
                 d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </button>
-        <nav className="basis-1/2 ml-auto" aria-label="Primary">
-            <ul className="flex justify-end items-center invisbile md:visible md:gap-6">
-                <li><a className="rounded-md px-3 py-1 border hover:underline hover:text-[var(--hover-color)] focus:outline-none focus:ring-2 focus:ring-offset-2" href="#projects">Projects</a></li>
-                <li><a className="rounded-md px-3 py-1 border hover:underline hover:text-[var(--hover-color)] focus:outline-none focus:ring-2 focus:ring-offset-2" href="#services">Services</a></li>
-                <li><a className="rounded-md px-3 py-1 border hover:underline hover:text-[var(--hover-color)] focus:outline-none focus:ring-2 focus:ring-offset-2" href="#about">About</a></li>
-                <li><a className="rounded-md px-3 py-1 border hover:underline hover:text-[var(--hover-color)] focus:outline-none focus:ring-2 focus:ring-offset-2" href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        {currentSiteMode === "W2" && (<PortfolioModeNav />)}
+        {currentSiteMode === "Freelance" && (<FreelanceModeNav />)}
         {showMobileMenu && (
             <>
                 <nav id="mobile-menu" className="bg-slate-800 px-4 pb-4 space-y-2 rounded-md absolute top-[25%] right-[7.5%]">
